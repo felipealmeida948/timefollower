@@ -22,56 +22,27 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int _selectedIndex = 0;
 
+  Widget callPage(int currentIndex) {
+    switch (currentIndex) {
+      case 0:
+        return DashboardPage();
+      case 1:
+        return TasksPaga();
+      case 2:
+        return NewTaskPage();
+      case 3:
+        return ReportsPage();
+      case 4:
+        return SettingsPage();
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
-    
-    var _widgetOptions = [
-      DashboardPage(),
-      TasksPaga(),
-      NewTaskPage(),
-      ReportsPage(),
-      SettingsPage(),
-    ];
-
     return Scaffold(
-      
       backgroundColor: Colors.white,
-      appBar: AppBar(
-        brightness: Brightness.light,
-        actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.add),
-            tooltip: 'Nova Atividade',
-            color: Colors.black,
-            onPressed: () {
-              setState(() {
-                
-              });
-            },
-          ),
-          IconButton(
-            icon: CircleAvatar(
-              backgroundImage: NetworkImage(""),
-            ),
-            onPressed: () {},
-          ),
-        ],
-        centerTitle: false,
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        title: Text(
-          'TimeFollower',
-          style: TextStyle(
-            color: Colors.black,
-            fontSize: 34.0,
-            fontWeight: FontWeight.bold,
-            letterSpacing: 2.0,
-          ),
-        ),
-      ),
       body: Container(
-        margin: EdgeInsets.symmetric(horizontal: 20.0),
-        child: _widgetOptions.elementAt(_selectedIndex),
+        child: callPage(_selectedIndex),
       ),
       bottomNavigationBar: Container(
         decoration: BoxDecoration(

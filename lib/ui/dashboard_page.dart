@@ -9,11 +9,45 @@ class DashboardPage extends StatefulWidget {
 class _DashboardPageState extends State<DashboardPage> {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: <Widget>[
-        _summaryCard(context),
-        _cardLastTasks(context),
-      ],
+    return Scaffold(
+      appBar: AppBar(
+        brightness: Brightness.light,
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.add),
+            tooltip: 'Nova Atividade',
+            color: Colors.black,
+            onPressed: () {},
+          ),
+          IconButton(
+            icon: CircleAvatar(
+              backgroundImage: NetworkImage(""),
+            ),
+            onPressed: () {},
+          ),
+        ],
+        centerTitle: false,
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        title: Text(
+          'TimeFollower',
+          style: TextStyle(
+            color: Colors.black,
+            fontSize: 34.0,
+            fontWeight: FontWeight.bold,
+            letterSpacing: 2.0,
+          ),
+        ),
+      ),
+      body: Container(
+        margin: EdgeInsets.symmetric(horizontal: 20.0),
+        child: Column(
+          children: <Widget>[
+            _summaryCard(context),
+            _cardLastTasks(context),
+          ],
+        ),
+      ),
     );
   }
 
@@ -193,10 +227,10 @@ class _DashboardPageState extends State<DashboardPage> {
         margin: EdgeInsets.symmetric(vertical: 2.0),
         child: Card(
           child: Row(
-            // children: <Widget>[
-            //   Text('Data'),
-            // ],
-          ),
+              // children: <Widget>[
+              //   Text('Data'),
+              // ],
+              ),
         ),
       ),
     );

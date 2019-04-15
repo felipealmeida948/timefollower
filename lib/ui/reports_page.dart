@@ -19,8 +19,38 @@ class ReportsPage extends StatefulWidget {
 class _ReportsPageState extends State<ReportsPage> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-       child: Text("Relatórios")
+     return Scaffold(
+      appBar: AppBar(
+        brightness: Brightness.light,
+        actions: <Widget>[
+          IconButton(
+            icon: CircleAvatar(
+              backgroundImage: NetworkImage(""),
+            ),
+            onPressed: () {},
+          ),
+        ],
+        centerTitle: false,
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        title: Text(
+          'Relatórios',
+          style: TextStyle(
+            color: Colors.black,
+            fontSize: 34.0,
+            fontWeight: FontWeight.bold,
+            letterSpacing: 2.0,
+          ),
+        ),
+      ),
+      body: Container(
+        margin: EdgeInsets.symmetric(horizontal: 20.0),
+        child: Column(
+          children: <Widget>[
+            Text('Relatórios')
+          ],
+        ),
+      ),
     );
   }
 }

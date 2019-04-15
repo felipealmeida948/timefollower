@@ -1,8 +1,8 @@
-// import 'package:timefollower/ui/home_page.dart'; 
-// import 'package:timefollower/ui/new_taks_page.dart'; 
-// import 'package:timefollower/ui/tasks_page.dart'; 
-// import 'package:timefollower/ui/reports_page.dart'; 
-// import 'package:timefollower/ui/settings_page.dart'; 
+// import 'package:timefollower/ui/home_page.dart';
+// import 'package:timefollower/ui/new_taks_page.dart';
+// import 'package:timefollower/ui/tasks_page.dart';
+// import 'package:timefollower/ui/reports_page.dart';
+// import 'package:timefollower/ui/settings_page.dart';
 
 import 'package:flutter/material.dart';
 
@@ -19,8 +19,44 @@ class TasksPaga extends StatefulWidget {
 class _TasksPagaState extends State<TasksPaga> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-       child: Text("Pagina de Tarefas"),
+    return Scaffold(
+      appBar: AppBar(
+        brightness: Brightness.light,
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.add),
+            tooltip: 'Nova Atividade',
+            color: Colors.black,
+            onPressed: () {},
+          ),
+          IconButton(
+            icon: CircleAvatar(
+              backgroundImage: NetworkImage(""),
+            ),
+            onPressed: () {},
+          ),
+        ],
+        centerTitle: false,
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        title: Text(
+          'Atividades',
+          style: TextStyle(
+            color: Colors.black,
+            fontSize: 34.0,
+            fontWeight: FontWeight.bold,
+            letterSpacing: 2.0,
+          ),
+        ),
+      ),
+      body: Container(
+        margin: EdgeInsets.symmetric(horizontal: 20.0),
+        child: Column(
+          children: <Widget>[
+            Text('Atividades')
+          ],
+        ),
+      ),
     );
   }
 }
