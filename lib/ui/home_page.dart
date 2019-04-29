@@ -43,6 +43,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     FlutterStatusbarcolor.setStatusBarColor(Colors.transparent);
     return Scaffold(
+
       // backgroundColor: Colors.transparent,
       body: Container(
         // color: Colors.transparent,
@@ -57,7 +58,7 @@ class _HomePageState extends State<HomePage> {
               color: const Color(0x20000000),
               blurRadius: 15.0,
               offset: Offset(0, -5.0),
-            )
+            ),
           ],
         ),
         child: BottomNavigationBar(

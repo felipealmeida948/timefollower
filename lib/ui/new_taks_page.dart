@@ -73,37 +73,45 @@ class _NewTaskPageState extends State<NewTaskPage> {
           ),
         ),
         body: Container(
-          margin: EdgeInsets.symmetric(horizontal: 20.0),
+          margin: EdgeInsets.symmetric(horizontal: 17.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              Text(
-                'Inisira uma nova atividade',
-                style: TextStyle(
-                  fontSize: 19.0,
-                  letterSpacing: -0.2,
-                  color: Colors.white
+              Container(
+                child: Text(
+                  'Inisira uma nova atividade',
+                  style: TextStyle(
+                    fontSize: 19.0,
+                    color: Colors.white,
+                  ),
                 ),
               ),
               TextField(
                 controller: _taskNameController,
+                cursorColor: Colors.white,
                 style: TextStyle(
-                  color: Color(0xFF651FFF),
+                  color: Colors.white,
                   fontSize: 35.0,
-                  letterSpacing: -0.2,
                   fontWeight: FontWeight.w700,
                 ),
                 decoration: InputDecoration(
+                  focusedBorder: UnderlineInputBorder(
+                    borderSide: const BorderSide(
+                      color: Colors.white,
+                      width: 0.0,
+                    ),
+                  ),
                   enabledBorder: const UnderlineInputBorder(
-                    borderSide:
-                        const BorderSide(color: Colors.white30, width: 0.0),
+                    borderSide: const BorderSide(
+                      color: Colors.white54,
+                      width: 0.0,
+                    ),
                   ),
                   alignLabelWithHint: true,
                   labelText: 'Nome',
                   labelStyle: TextStyle(
-                    color: Colors.white30,
+                    color: Colors.white54,
                     fontSize: 30.0,
-                    letterSpacing: -0.2,
                     fontWeight: FontWeight.w700,
                   ),
                 ),
