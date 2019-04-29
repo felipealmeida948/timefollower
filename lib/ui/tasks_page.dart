@@ -5,6 +5,7 @@
 // import 'package:timefollower/ui/settings_page.dart';
 
 import 'package:flutter/material.dart';
+import 'package:timefollower/ui/new_taks_page.dart';
 
 // import 'dart:io';
 
@@ -27,13 +28,20 @@ class _TasksPagaState extends State<TasksPaga> {
             icon: Icon(Icons.add),
             tooltip: 'Nova Atividade',
             color: Colors.black,
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => NewTaskPage()),
+              );
+            },
           ),
           IconButton(
             icon: CircleAvatar(
               backgroundImage: NetworkImage(""),
             ),
-            onPressed: () {},
+            onPressed: () {
+              
+            },
           ),
         ],
         centerTitle: false,
@@ -45,7 +53,7 @@ class _TasksPagaState extends State<TasksPaga> {
             color: Colors.black,
             fontSize: 34.0,
             fontWeight: FontWeight.bold,
-            letterSpacing: 2.0,
+            fontFamily: 'SFDisplayPro',
           ),
         ),
       ),

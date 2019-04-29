@@ -1,4 +1,6 @@
 import 'package:timefollower/ui/home_page.dart'; 
+import 'package:timefollower/ui/login_page.dart'; 
+
 // import 'package:timefollower/ui/new_taks_page.dart'; 
 // import 'package:timefollower/ui/tasks_page.dart'; 
 // import 'package:timefollower/ui/reports_page.dart'; 

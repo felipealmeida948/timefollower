@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:timefollower/presentation/line_awesome_icons.dart';
+import 'package:timefollower/ui/new_taks_page.dart';
 
 class DashboardPage extends StatefulWidget {
   @override
@@ -14,10 +15,16 @@ class _DashboardPageState extends State<DashboardPage> {
         brightness: Brightness.light,
         actions: <Widget>[
           IconButton(
-            icon: Icon(Icons.add),
-            tooltip: 'Nova Atividade',
-            color: Colors.black,
-            onPressed: () {},
+            icon: Icon(
+              LineAwesome.plus,
+              color: Colors.black,
+            ),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => NewTaskPage()),
+              );
+            },
           ),
           IconButton(
             icon: CircleAvatar(
@@ -35,7 +42,7 @@ class _DashboardPageState extends State<DashboardPage> {
             color: Colors.black,
             fontSize: 34.0,
             fontWeight: FontWeight.bold,
-            letterSpacing: 2.0,
+            fontFamily: 'SFDisplayPro',
           ),
         ),
       ),
@@ -93,6 +100,7 @@ class _DashboardPageState extends State<DashboardPage> {
                           style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.w100,
+                            fontFamily: 'SFDisplayPro',
                           ),
                         ),
                         subtitle: Text(
@@ -114,6 +122,7 @@ class _DashboardPageState extends State<DashboardPage> {
                           style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.w100,
+                            fontFamily: 'SFDisplayPro',
                           ),
                         ),
                         subtitle: Text(
@@ -121,6 +130,7 @@ class _DashboardPageState extends State<DashboardPage> {
                           style: TextStyle(
                             fontSize: 30.0,
                             color: Colors.white,
+                            fontFamily: 'SFDisplayPro',
                           ),
                         ),
                       ),
@@ -135,6 +145,7 @@ class _DashboardPageState extends State<DashboardPage> {
                           style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.w100,
+                            fontFamily: 'SFDisplayPro',
                           ),
                         ),
                         subtitle: Text(
@@ -142,6 +153,7 @@ class _DashboardPageState extends State<DashboardPage> {
                           style: TextStyle(
                             fontSize: 30.0,
                             color: Colors.white,
+                            fontFamily: 'SFDisplayPro',
                           ),
                         ),
                       ),
@@ -186,9 +198,15 @@ class _DashboardPageState extends State<DashboardPage> {
                         style: TextStyle(
                           fontSize: 22.0,
                           fontWeight: FontWeight.w600,
+                          fontFamily: 'SFDisplayPro',
                         ),
                       ),
-                      Text("Veja as ultimas atividades lançadas")
+                      Text(
+                        "Veja as ultimas atividades lançadas",
+                        style: TextStyle(
+                          fontFamily: 'SFDisplayPro',
+                        ),
+                      )
                     ],
                   ),
                   Column(

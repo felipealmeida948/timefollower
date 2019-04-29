@@ -24,6 +24,8 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
   rubber: ^0.2.7
+  flutter_statusbarcolor: any
+
 
 dev_dependencies:
   flutter_test:
@@ -63,11 +65,15 @@ flutter:
         - asset: fonts/LineAwesome.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
-  #   - family: Trajan Pro
-  #     fonts:
-  #       - asset: fonts/TrajanPro.ttf
-  #       - asset: fonts/TrajanPro_Bold.ttf
-  #         weight: 700
+    - family: SFDisplayPro
+      fonts:
+        - asset: fonts/SF-Pro-Display-Bold.otf
+        - asset: fonts/SF-Pro-Display-Heavy.otf
+        - asset: fonts/SF-Pro-Display-Light.otf
+        - asset: fonts/SF-Pro-Display-Medium.otf
+        - asset: fonts/SF-Pro-Display-Regular.otf
+        - asset: fonts/SF-Pro-Display-Thin.otf
+          weight: 700
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.io/custom-fonts/#from-packages

@@ -39,7 +39,7 @@ class _SettingsPageState extends State<SettingsPage> {
             color: Colors.black,
             fontSize: 34.0,
             fontWeight: FontWeight.bold,
-            letterSpacing: 2.0,
+            fontFamily: 'SFDisplayPro',
           ),
         ),
       ),

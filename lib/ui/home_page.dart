@@ -1,4 +1,6 @@
+import 'package:flutter/services.dart';
 import 'package:timefollower/presentation/line_awesome_icons.dart';
+import 'package:flutter_statusbarcolor/flutter_statusbarcolor.dart';
 
 import 'package:timefollower/ui/dashboard_page.dart';
 import 'package:timefollower/ui/tasks_page.dart';
@@ -28,20 +30,22 @@ class _HomePageState extends State<HomePage> {
         return DashboardPage();
       case 1:
         return TasksPaga();
+      // case 2:
+      //   return NewTaskPage();
       case 2:
-        return NewTaskPage();
-      case 3:
         return ReportsPage();
-      case 4:
+      case 3:
         return SettingsPage();
     }
   }
 
   @override
   Widget build(BuildContext context) {
+    FlutterStatusbarcolor.setStatusBarColor(Colors.transparent);
     return Scaffold(
-      backgroundColor: Colors.white,
+      // backgroundColor: Colors.transparent,
       body: Container(
+        // color: Colors.transparent,
         child: callPage(_selectedIndex),
       ),
       bottomNavigationBar: Container(
@@ -63,35 +67,50 @@ class _HomePageState extends State<HomePage> {
               icon: Icon(LineAwesome.dashboard),
               title: Text(
                 'Dashboard',
-                style: TextStyle(fontSize: 12.0),
+                style: TextStyle(
+                  fontSize: 12.0,
+                  fontFamily: 'SFDisplayPro',
+                ),
               ),
             ),
             BottomNavigationBarItem(
               icon: Icon(LineAwesome.clock_o),
               title: Text(
                 'Atividades',
-                style: TextStyle(fontSize: 12.0),
+                style: TextStyle(
+                  fontSize: 12.0,
+                  fontFamily: 'SFDisplayPro',
+                ),
               ),
             ),
-            BottomNavigationBarItem(
-              icon: Icon(LineAwesome.plus),
-              title: Text(
-                'Novo',
-                style: TextStyle(fontSize: 12.0),
-              ),
-            ),
+            // BottomNavigationBarItem(
+            //   icon: Icon(LineAwesome.plus),
+            //   title: Text(
+            //     'Novo',
+            //     style: TextStyle(
+            //       fontSize: 12.0,
+            //       fontFamily: 'SFDisplayPro',
+            //     ),
+            //   ),
+            // ),
             BottomNavigationBarItem(
               icon: Icon(LineAwesome.bar_chart),
               title: Text(
                 'Relatórios',
-                style: TextStyle(fontSize: 12.0),
+                style: TextStyle(
+                  fontSize: 12.0,
+                  fontFamily: 'SFDisplayPro',
+                ),
               ),
             ),
             BottomNavigationBarItem(
               icon: Icon(LineAwesome.gear),
               title: Text(
                 'Ajustes',
-                style: TextStyle(fontSize: 12.0),
+                style: TextStyle(
+                  fontSize: 12.0,
+                  fontFamily: 'SFDisplayPro',
+                ),
               ),
             ),
           ],
