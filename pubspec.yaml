@@ -26,6 +26,7 @@ dependencies:
   rubber: ^0.2.7
   flutter_statusbarcolor: any
   flutter_svg: ^0.12.4
+  sliding_up_panel: ^0.3.4
 
 
 dev_dependencies:

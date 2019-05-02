@@ -12,6 +12,7 @@ class _DashboardPageState extends State<DashboardPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      
       appBar: AppBar(
         brightness: Brightness.light,
         actions: <Widget>[
@@ -294,7 +295,7 @@ class _DashboardPageState extends State<DashboardPage> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Container(
-                  margin: EdgeInsets.only(bottom: 1.0),
+                  margin: EdgeInsets.only(bottom: 2.0),
                   child: Text(
                     "Trocar Banners",
                     style: TextStyle(
@@ -329,14 +330,14 @@ class _DashboardPageState extends State<DashboardPage> {
                       child: Row(
                         children: <Widget>[
                           Icon(
-                            LineAwesome.building,
+                            LineAwesome.calendar_1,
                             size: 13.0,
                             color: Colors.amber,
                           ),
                           Container(
                             margin: EdgeInsets.only(left: 2.0),
                             child: Text(
-                              "RaiaDrogasil",
+                              "14/07/2018",
                               style: TextStyle(
                                 fontSize: 13.0,
                               ),
