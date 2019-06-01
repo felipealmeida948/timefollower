@@ -145,7 +145,6 @@
 				ACD97EF804ADF7E65F6C75AB /* Pods-Runner.release.xcconfig */,
 				8C0D2E143BB50D22BFB54A31 /* Pods-Runner.profile.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -398,6 +397,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jaedigital.timefollower;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Profile;
@@ -524,6 +524,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jaedigital.timefollower;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -548,6 +549,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jaedigital.timefollower;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;

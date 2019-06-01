@@ -145,7 +145,7 @@ class _NewTaskPageState extends State<NewTaskPage> {
                         ),
                       ),
                       alignLabelWithHint: true,
-                      labelText: 'Escolhe um projeto',
+                      labelText: 'Escolha um projeto',
                       labelStyle: TextStyle(
                         color: Colors.white54,
                         fontSize: 30.0,
